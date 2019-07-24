@@ -1,0 +1,645 @@
+/* ========================================================================== */
+/* SIDEBAR COMPONENTS */
+/* ========================================================================== */
+.menu-icon {
+
+    margin-top: 3rem;
+    cursor: pointer;
+
+    .line {
+        height: .2rem;
+        width: 2.5rem;
+        background-color: var(--dark-grey);
+        margin-bottom: .6rem;
+    }
+
+    .line-1, .line-3 {
+        width: 1.8rem;
+        transition: all .4s;
+    }
+
+    &:hover .line{
+        width: 2.5rem;
+    }
+}
+
+.social-icons-list {
+    padding: 0;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .social-link {
+        font-size: 2rem;
+        color: var(--icon-color);
+        transition: color .3s;
+
+        &:hover {
+            color: var(--primary-color-1);
+        }
+    }
+}
+
+.year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--year-color);
+}
+
+/* ========================================================================== *
+/* NAVIGATION COMPONENTS */
+/* ========================================================================== */
+.navigation {
+
+    &__heading {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 3.5rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        color: var(--primary-color-1);
+        text-align: center;
+    }
+
+    &__search-input {
+        width: 30rem;
+        padding: 1rem 2rem;
+        background-color: rgba(0, 0, 0, .3);
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.6rem;
+        color: var(--primary-color-1);
+        letter-spacing: .1rem;
+        outline: none;
+        border: .1rem solid var(--year-color);
+        border-radius: 10rem;
+        transition: all .3s;
+
+        &:focus {
+            background-color: rgba(0, 0, 0, .1);
+            width: 33rem;
+        }
+    }
+
+    &__search-btn {
+        border: none;
+        background-color: transparent;
+        color: var(--primary-color-1);
+        font-size: 1.7rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    
+    &__list {
+        padding: 0;
+        height: 28rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__link {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        transition: color .5s;
+
+        &::before {
+            content: "";
+            width: 0rem;
+            height: .1rem;
+            background-color: var(--primary-color-1);
+            position: absolute;
+            top: 1rem;
+            left: -4rem;
+            transition: width .5s cubic-bezier(1, 0, 0, 1);
+        }
+
+        &::after {
+            content: "";
+            width: 0rem;
+            height: .1rem;
+            background-color: var(--primary-color-1);
+            position: absolute;
+            top: 1rem;
+            right: -4rem;
+            transition: width .5s cubic-bezier(1, 0, 0, 1);
+        }
+
+        &:hover {
+            color: var(--primary-color-1);
+
+            &::before, &::after {
+                width: 3rem;
+            }
+        }
+    }
+
+    .copyright {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.header {
+
+
+
+    .brand {
+        display: flex;
+        cursor: pointer;
+
+        .hotel-heading {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 2.7rem;
+            font-weight: 400;
+            color: rgb(70, 60, 204);
+            letter-spacing: .2rem;
+        }
+    }
+
+
+    .banner {
+        color: white;
+        height: 65rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__heading {
+            font-family: "Josefin Sans", sans-serif;    
+            font-size: 6rem;
+            font-weight: 400;  
+            margin-bottom: 0;  
+            animation: anim 2s;
+        }
+
+        &__paragraph {
+            font-size: 3.5rem;
+            font-weight: 300;
+            animation: anim 1.5s .5s backwards;
+        }
+
+        &__button {
+            font-family: "Josefin Sans", sans-serif;    
+            width: 21rem;
+            padding: 1.3rem 2rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: var(--primary-color-1);
+            letter-spacing: .1rem;
+            background: transparent;
+            border: 2px solid var(--primary-color-1);
+            outline: none;
+            cursor: pointer;
+            transition: all .4s cubic-bezier(1, 0, 0, 1);
+            animation: anim 1s 1s backwards;
+
+            &:hover {
+                background: var(--primary-color-1);
+                color: white;
+            }
+
+            &:active {
+                transform: translateY(.2rem);
+            }
+        }
+    }
+}
+
+/* ========================================================================== */
+/* ABOUT US */
+/* ========================================================================== */
+.about-us {
+
+    &__content {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10rem;
+        box-sizing: border-box;
+
+        &--heading {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 4rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: var(--year-color);
+        }
+
+        .underline {
+            .small-underline {
+                width: 9rem;
+                height: .1rem;
+                margin: 0 auto 1rem auto;
+                background-color: var(--underline-color);
+            }
+
+            .big-underline {
+                width: 20rem;
+                height: .1rem;
+                background-color: var(--underline-color);
+            }
+        }
+
+        .sub-heading {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: .2rem;
+            color: var(--underline-color);
+            text-align: center;
+        }
+
+        &--paragraph {
+            font-size: 1.6rem;
+            font-style: italic;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        &--btn {
+            width: 15rem;
+            padding: .7rem .5rem;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--lighter-grey);
+            background-color: var(--underline-color);
+            outline: none;
+            cursor: pointer;
+
+            .btn-arrow {
+                margin-left: .5rem;
+                transition: all .4s;
+            }
+
+            &:hover .btn-arrow {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    
+
+    &__images {
+        flex: 1 1;
+        position: relative;
+
+        .image {
+            width: 32rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            box-shadow: 0 3rem 6rem rgba(0, 0, 0, .4);
+            border-radius: .4rem;
+            outline-offset: 1.5rem;
+            transition: all .2s;
+
+            &:hover {
+                // outline: 1.5rem double var(--underline-color);
+                transform: scale(1.05) translateY(-.5rem);
+                box-shadow: 0 4.5rem 7rem rgba(0, 0, 0, .5);
+                z-index: 20;
+            }
+
+        }
+
+        .image-1 {
+            top: 10%;
+            left: 20%;
+        }
+
+        .image-2 {
+            top: 20%;
+            left: 30%;
+        }
+
+        .image-3 {
+            top: 30%;
+            left: 40%;
+
+        }
+
+        .image-4 {
+            top: 40%;
+            left: 50%;
+        }
+    }
+}
+
+/* ========================================================================== */
+/* ROOMS */
+/* ========================================================================== */
+.rooms {
+
+    .common-header {
+        
+        .underline {
+            .small-underline {
+                width: 9rem;
+                height: .1rem;
+                margin: 0 auto 1rem auto;
+                background-color: var(--underline-color);
+            }
+
+            .big-underline {
+                width: 20rem;
+                height: .1rem;
+                margin: 0 auto;
+                background-color: var(--underline-color);
+            }
+        }
+    }
+
+    &__card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .room-card {
+            width: 50rem;
+            margin: 5rem;
+            background-color: var(--card-color);
+            box-shadow: 0 3rem 6rem rgba(0, 0, 0, .3);
+
+            &--img {
+                width: 100%;
+            }
+
+            &--content {
+                color: var(--lighter-grey);
+                padding: 2rem;
+
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+
+            &--heading {
+                    margin: 0;
+                    font-size: 3rem;
+                    font-weight: 300;
+            }
+            
+            &--paragraph {
+                font-size: 1.5rem;
+                color: var(--icon-color);
+            }
+
+            &--price {
+                font-size: 5rem;
+                font-weight: 300;
+                text-align: right;
+                margin: 0;
+            }
+
+            &--btn {
+                width: 15rem;
+                padding: 1.5rem 1rem;
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                color: var(--underline-color);
+                background-color: transparent;
+                border: 1px solid var(--underline-color);
+                border-radius: 10rem;
+                outline: none;
+                cursor: pointer;
+
+                .btn-arrow {
+                    margin-left: .5rem;
+                    transition: all .4s;
+                }
+
+                &:hover .btn-arrow {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &__btn-wrapper {
+        text-align: center;
+
+        .rooms-btn {
+            width: 20rem;
+            padding: 1.5rem 1rem;
+            margin: 4rem 0;
+            background-color: transparent;
+            text-transform: uppercase;
+            color: var(--underline-color);
+            border: .2rem solid var(--underline-color);
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, .2);
+            transition: all .2s;
+
+            &:hover {
+                color: var(--lighter-grey);
+                background-color: var(--underline-color);
+            }
+        }
+    }
+}
+
+/* ========================================================================== */
+/* CUSTOMERS */
+/* ========================================================================== */
+.customers {
+
+    .common-header {
+        
+        .underline {
+            .small-underline {
+                width: 9rem;
+                height: .1rem;
+                margin: 0 auto 1rem auto;
+                background-color: var(--underline-color);
+            }
+
+            .big-underline {
+                width: 20rem;
+                height: .1rem;
+                margin: 0 auto;
+                background-color: var(--underline-color);
+            }
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.8rem;
+        color: var(--lighter-grey);
+        width: 50%;
+        margin: 2rem auto 8rem auto;
+        text-align: center;
+    }
+
+    &__card-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+        .customer-card {
+            background-color: var(--light-grey);
+            width: 60rem;
+            display: flex;
+
+            &__image-wrapper {
+                margin: auto 0;
+
+                .customer-card-image {
+                    width: 20rem;
+                    margin-left: -1.3rem;
+                }
+            }
+
+            
+
+            &__info {
+                padding: 0 2rem;
+
+                &--full-name {
+                    font-size: 2rem;
+                    font-weight: 300;
+                    margin-bottom: 0;
+                }
+
+                &--paragraph-1 {
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    color: var(--underline-color);
+                }
+
+                &--paragraph-2 {
+                    font-size: 1.3rem;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+/* ========================================================================== */
+/* FOOTER */
+/* ========================================================================== */
+.footer-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: goldenrod;
+    margin: 1rem 0 3rem 0;
+}
+
+.footer-list {
+    padding: 0;
+
+    &__item {
+        margin-bottom: 2rem;
+
+        &--link {
+            font-size: 1.4rem;
+            color: #bbb;
+        }
+    }
+}
+
+.contact {
+
+    p {
+        font-size: 1.5rem;
+        color: #bbb;
+        margin-bottom: 4rem;
+    }
+
+    .footer-form {
+        display: flex;
+
+        &--input {
+            width: 25rem;
+            padding: 1rem;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 1.8rem;
+            color: #bbb;
+            outline: none;
+        }
+
+        &--btn {
+            padding: 1rem;
+            background-color: var(--underline-color);
+            color: var(--lighter-grey);
+            border: none;
+        }
+    }
+}
+
+.gallery {
+    max-width: 45rem;
+
+    .gallery-images {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__image-wrapper {
+            width: 12rem;
+            margin: .4rem;
+            overflow: hidden;
+
+            .footer-image {
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transition: all .5s;
+
+                &:hover {
+                    transform: scale(1.3);
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.creator-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 0 4rem;
+
+    .copyright-text {
+        font-size: 1.3rem;
+        color: #aaa;
+    }
+
+    .text-right {
+        font-size: 1.4rem;
+        color: #bbb;
+
+        i {
+            font-size: 2rem;
+            margin: .5rem;
+            color: tomato;
+        }
+
+        span {
+            color: gold;
+        }
+    }
+}

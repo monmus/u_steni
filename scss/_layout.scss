@@ -1,0 +1,119 @@
+/* ========================================================================== */
+/* SIDEBAR */
+/* ========================================================================== */
+.sidebar {
+    width: 8rem;
+    height: 100%;
+    background-color: var(--light-grey);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 1px 1px 1px var(--lighter-grey);
+}
+
+/* ========================================================================== */
+/* NAVIGATION */
+/* ========================================================================== */
+.navigation {
+    position: fixed;
+    left: -32rem;
+    width: 40rem;
+    height: 100%;
+    background: url("../img/nav-bg.jpeg") center no-repeat;
+    background-color: grey;
+  
+    background-size: cover;
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: left .8s cubic-bezier(1, 0, 0, 1);
+
+    &__search {
+        position: relative;
+    }
+}
+
+// The checkbox
+.checkbox:checked ~ .navigation {
+    left: 8rem;
+}
+
+// The menu icon
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: rotate(-405deg) translate(-5px, 6px);
+    width: 2.5rem;
+}
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: rotate(405deg) translate(-5px, -6px);;
+    width: 2.5rem;
+}
+
+
+
+/* ========================================================================== */
+/* COMMON HEADER */
+/* ========================================================================== */
+.common-header {
+    padding: 5rem;
+    text-align: center;
+    color: var(--underline-color);
+}
+
+.common-heading {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+
+/* ========================================================================== */
+/* MARGIN LEFT */
+/* ========================================================================== */
+.header, .about-us, .rooms, .customers, .footer {
+    margin-left: 8rem;
+}
+
+/* ========================================================================== */
+/* HEADER*/
+/* ========================================================================== */
+.header {
+    height: 100vh;
+    background: url("../images/gliczarow.jpg") center no-repeat;
+   
+    background-size: cover;
+
+   
+      
+    }
+/* ========================================================================== */
+/* ABOUT US */
+/* ========================================================================== */
+.about-us {
+    display: flex;
+    background-color: var(--lighter-grey);
+}
+
+/* ========================================================================== */
+/* CUSTOMERS */
+/* ========================================================================== */
+.customers {
+    padding-bottom: 7rem;
+    background-color: var(--card-color);
+}
+
+/* ========================================================================== */
+/* FOOTER */
+/* ========================================================================== */
+.main-part {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--footer-background);
+    padding: 4rem;
+}
